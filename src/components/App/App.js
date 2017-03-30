@@ -5,7 +5,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        Hello World!
+        <button className="dialogBtn">Event</button>
+        <button className="dialogBtn">Task</button>
+        <button className="dialogBtn">Edit</button>
       </div>
     );
   }
