@@ -26,7 +26,7 @@ class App extends Component {
           <p className="app-description">
             Click any of the below buttons to get Thunderbird 
             like dialog-box. The UI of the dialog box is inspired from dialog box in Elementary OS version 
-            of Thunderbird.
+            of Thunderbird. Check this <a href="https://drive.google.com/open?id=0B4eS4nKUNceueWhlb1lUSE55MnM" target="_blank">page</a>, to see how it looks on Elementary OS.
           </p>
         </div>
         <div className="btn-wrapper">

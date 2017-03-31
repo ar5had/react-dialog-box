@@ -1,2 +1,2 @@
 # react-dialogbox
-React implementation of Thunderbird XUL dialog-box. 
+React implementation of Thunderbird's XUL dialog-box. 
