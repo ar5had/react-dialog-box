@@ -61,7 +61,7 @@ circle {
 }
 
 ellipse {
-  stroke-width: 4;
+  stroke-width: 5;
   stroke: #555;
 }
 
@@ -75,12 +75,46 @@ ellipse {
 }
 
 button.dialog-btn {
-  margin: 15px;
-  padding: 3px 5px;
-  font-size: 13px;
+  margin: 10px;
+  padding: 4px 5px;
   background-color: rgb(221, 221, 221);
   border-radius: 1px;
   border: solid 1px rgba(102, 102, 102, 0.56);
+  display: flex;
+  border: solid 1px transparent;
+  background: transparent;
+  transition: all .1s linear;
+  align-content: center;
+}
+
+button > * {
+  vertical-align: center;
+}
+
+button > span {
+  line-height: 19px;
+  font-size: 13px;
+}
+
+button.dialog-btn:hover {
+  background-color: #fafafa;
+  border-color: rgba(102, 102, 102, 0.4);
+}
+
+button > span, button > div {
+  vertical-align: middle;
+  vertical-align: -webkit-baseline-middle;
+} 
+
+#event-icon, #task-icon, #edit-icon {
+  margin-right: 3px;
+}
+
+#event-icon > svg > #newevent-flat,
+#task-icon > svg > #newtask-flat,
+#edit-icon > svg > #edit-flat {
+  display: block;
+  fill: #444;
 }
 
 button::-moz-focus-inner {

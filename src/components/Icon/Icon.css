@@ -1,0 +1,31 @@
+.icon {
+  height: 19px;
+  width: 19px;
+}
+
+.icon path {
+  display: none;
+}
+
+.icon path:target {
+  display: block;
+  stroke-width: 1;
+}
+
+.icon .normal {
+  fill: #505050;
+  fill-opacity: 0.8;
+  stroke: #404040;
+}
+
+.icon .inverted {
+  fill: #fff;
+  fill-opacity: 1;
+  stroke: #111922;
+}
+
+.icon .unread {
+  fill: #3971c3;
+  fill-opacity: 1;
+  stroke: #115174;
+}
