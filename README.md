@@ -1,2 +1,2 @@
 # react-dialogbox
-Dialog-box that looks like Thunderbird XUL dialog-box.
+React implementation of Thunderbird XUL dialog-box. 

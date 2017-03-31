@@ -1,14 +1,79 @@
-.App {
+.app {
+  border: solid 1px rgba(102, 102, 102, 0.56);
+  max-width: 600px;
+  margin: 10px auto;
+  border-radius: 5px;
+  padding-bottom: 30px;
+  background: rgba(238, 238, 238, 0.35);
+  box-shadow: 0px 5px 20px 0 rgba(46,61,73,.37);
+}
+
+.app-title-bar {
+  font-weight: 700;
+  background: rgba(204, 204, 204, 0.7);
+  padding: 8px 0;
+  text-align: center;
+  color: #777;
+  border-bottom: solid 1px rgba(102, 102, 102, 0.56);
+  margin-bottom: 30px;
+}
+
+.app-logo {
+  animation: app-logo-spin infinite 10s linear;
+  height: 80px;
+}
+
+.app-header, .btn-wrapper {
   text-align: center;
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 15px;
+  padding: 20px;
 }
 
-button.dialogBtn {
+.app-header {
+  color: white;
+  flex-wrap: wrap;
+}
+
+.app-header > * {
+  flex: 1 1 100%;
+}
+
+.logo-wrapper {
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.app-heading {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+}
+
+.app-description {
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+circle {
+  fill: #555;
+}
+
+ellipse {
+  stroke-width: 4;
+  stroke: #555;
+}
+
+@keyframes app-logo-spin {
+  0% { transform: rotate(0deg); } 
+  100% { transform: rotate(360deg); }
+}
+
+button.dialog-btn {
   margin: 15px;
-  padding: 2px 5px;
+  padding: 3px 5px;
+  font-size: 13px;
   background-color: rgb(221, 221, 221);
   border-style: outset; 
   border: solid 1px rgba(102, 102, 102, 0.56);
