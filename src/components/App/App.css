@@ -8,4 +8,14 @@
 
 button.dialogBtn {
   margin: 15px;
+  padding: 2px 5px;
+  background-color: rgb(221, 221, 221);
+  border-style: outset; 
+  border: solid 1px rgba(102, 102, 102, 0.56);
 }
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+

@@ -1,9 +1,15 @@
 * {
   font-family: 'Roboto', sans-serif;
+  color: #666;
+  font-size: 13px;
+  outline: none;
+  -moz-outline: none;
+  font-weight: 400;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: rgba(238, 238, 238, 0.3);
 }
