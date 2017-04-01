@@ -1,0 +1,2 @@
+export const EVENT_DIALOG_BOX = "EVENT_DIALOG_BOX";
+export const TASK_DIALOG_BOX = "TASK_DIALOG_BOX";

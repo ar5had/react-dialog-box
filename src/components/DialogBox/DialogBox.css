@@ -1,0 +1,49 @@
+.dbWrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 80vh;
+  z-index: 9999;
+  max-width: 500px;
+  width: 100%;
+  animation: open .2s ease forwards;
+}
+
+.dbWrapper.close {
+  animation: close .3s ease forwards;  
+}
+
+@keyframes open {
+  0% { transform: translate(-50%, -50%) scale(.7); opacity: 0; } 
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes close {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(.8); opacity: 0; } 
+}
+
+.dialog-box {
+  min-height: 340px;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper:active {
+  border-color: #a9a9a9;
+  border-radius: 2px;
+}
+
+.close-icon {
+  margin: 5px;
+}

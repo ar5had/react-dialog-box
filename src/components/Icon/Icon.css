@@ -29,3 +29,12 @@
   fill-opacity: 1;
   stroke: #115174;
 }
+
+.icon #attach {
+  fill: none;
+  stroke-opacity: 1;
+}
+
+.icon #status {
+  fill-opacity: 0.5
+}
