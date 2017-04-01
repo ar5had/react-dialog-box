@@ -4,8 +4,10 @@ import objectAssign from 'object-assign';
 import { EVENT_DIALOG_BOX, TASK_DIALOG_BOX } from '../../constants/dialogBoxConstants';
 
 import './DialogBox.css';
+
 import DropdownMenu from '../DropdownMenu/DropdownMenu';
 import DirectMenu from '../DirectMenu/DirectMenu';
+import AllSections from '../AllSections/AllSections';
 
 class DialogBox extends Component {
   constructor(props) {
@@ -112,6 +114,7 @@ class DialogBox extends Component {
           </div>
           <DropdownMenu config={config.dropdown.config} />
           <DirectMenu config={config.directMenu.config} />
+          <AllSections config={config.sections.config} />
         </div>
       </div>
     );
