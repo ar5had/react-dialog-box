@@ -14,6 +14,10 @@ class DialogBox extends Component {
   }
 
   onMouseDown(e) {
+    this.mouseDownBool = true;
+
+    this.allotHigherZIndex();    
+
     e.stopPropagation();
     e.preventDefault();
     this.dx = 0;
@@ -23,7 +27,7 @@ class DialogBox extends Component {
     // this removes stuttering
     setTimeout(() => {
       this.box.addEventListener('mousemove', this.onMouseMove);
-    }, 150);
+    }, 100);
   }
 
   onMouseUp(e) {
@@ -33,22 +37,25 @@ class DialogBox extends Component {
     this.y = e.clientY;
     this.tb.classList.remove('mousedown');
     this.box.removeEventListener('mousemove', this.onMouseMove);
+    this.mouseDownBool = false;
   }
 
   onMouseMove(e) {
-    const dx = e.clientX - this.x;
-    const dy = e.clientY - this.y;    
-    this.x = e.clientX;
-    this.y = e.clientY;
-    let top = parseFloat(this.getStyleProp(this.box, 'top'));
-    let left = parseFloat(this.getStyleProp(this.box, 'left'));
-    top += dy;
-    left += dx;
-    top = top < 15 ? 15 : top;
-    left = left < 15 ? 15 : left;    
-    this.box.style.top = `${top}px`;
-    this.box.style.left = `${left}px`;
-    console.log(dx, dy, top, left);
+    // mouseDownBool makes sure mouseUp for each dialog event 
+    // doesn't conflict when they are close enough to share same
+    // title bar space
+    if (this.mouseDownBool) {
+      const dx = e.clientX - this.x;
+      const dy = e.clientY - this.y;    
+      this.x = e.clientX;
+      this.y = e.clientY;
+      let top = parseFloat(this.getStyleProp(this.box, 'top'));
+      let left = parseFloat(this.getStyleProp(this.box, 'left'));
+      top += dy;
+      left += dx;    
+      this.box.style.top = `${top}px`;
+      this.box.style.left = `${left}px`;
+    }
   }
 
   getStyleProp(node, prop) {
@@ -66,11 +73,23 @@ class DialogBox extends Component {
     } 
   }
 
+  allotHigherZIndex() {
+    // makes sure selected/clicked dialog gets higher z-index when
+    // both task and event dialog box are opened 
+    const dbs = document.querySelectorAll('.dbWrapper');
+    if (dbs.length === 2) {
+      const otherDb = [].filter.call(dbs, (elem) => elem !== this.box);
+      this.box.style.zIndex = `${parseInt(this.getStyleProp(otherDb[0], 'z-index'), 10) + 5}`;
+    }
+  }
+
   render() {
     const config = objectAssign({}, this.state.config);
 
     return (
-      <div className={`dbWrapper`} ref={ node => this.box = node } >
+      <div className={`dbWrapper`} ref={ node => this.box = node }
+        onClick={this.allotHigherZIndex.bind(this)}
+      >
         <div className="dialog-box window">
           <div className="title-bar dialog-title-bar"
             ref={ node => this.tb = node }
