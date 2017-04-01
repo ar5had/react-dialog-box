@@ -5,9 +5,13 @@
   transform: translate(-50%, -50%);
   max-height: 80vh;
   z-index: 9999;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
   animation: open .2s ease forwards;
+}
+
+.dialog-title-bar.title-bar {
+  margin-bottom: 0;
 }
 
 .dbWrapper.close {
@@ -27,6 +31,18 @@
 .dialog-box {
   margin: 10px;
   min-height: 340px;
+}
+
+.task-dialog .direct-button:nth-child(1) .icon > svg > #save-close,
+.task-dialog .direct-button:nth-child(2) .icon > svg > #address,
+.task-dialog .direct-button:nth-child(3) .icon > svg > #security,
+.task-dialog .direct-button:nth-child(4) .icon > svg > #delete,
+.event-dialog .direct-button:nth-child(1) .icon > svg > #save-close,
+.event-dialog .direct-button:nth-child(2) .icon > svg > #address,
+.event-dialog .direct-button:nth-child(3) .icon > svg > #security,
+.event-dialog .direct-button:nth-child(4) .icon > svg > #attach,
+.event-dialog .direct-button:nth-child(5) .icon > svg > #delete {
+  display: block;
 }
 
 .icon-wrapper {

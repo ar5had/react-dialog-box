@@ -1,0 +1,11 @@
+.dropdown {
+  margin: 7px 10px;
+}
+
+.dropdown .label {
+  cursor: default;
+}
+
+.label .access-key {
+  text-decoration: underline;
+}

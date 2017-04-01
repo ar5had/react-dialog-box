@@ -1,0 +1,5 @@
+.dropdown-menu {
+  display: flex;
+  border-bottom: solid 1px #a9a9a9;
+  background: #dbdbdb;
+}

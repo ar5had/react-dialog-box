@@ -56,7 +56,6 @@ class App extends Component {
         {this.getDialogBox()}
         <div className="app window">
           <div className="title-bar">React Dialog Box</div>
-          <Icon />
           <div className="app-header">
             <div className="logo-wrapper">
               <svg className="app-logo" version="1.1" width="184px"
@@ -97,7 +96,7 @@ class App extends Component {
                 this.toggleDialogBox(TASK_DIALOG_BOX);
               }}
             >
-              <Icon id="task-icon" />            
+              <Icon id="task-icon" />         
               <span>Task</span>
             </button>
           </div>

@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import objectAssign from 'object-assign';
 
 import { EVENT_DIALOG_BOX, TASK_DIALOG_BOX } from '../../constants/dialogBoxConstants';
+
 import './DialogBox.css';
-import objectAssign from 'object-assign';
+import DropdownMenu from '../DropdownMenu/DropdownMenu';
+import DirectMenu from '../DirectMenu/DirectMenu';
 
 class DialogBox extends Component {
   constructor(props) {
@@ -15,7 +18,6 @@ class DialogBox extends Component {
 
   onMouseDown(e) {
     this.mouseDownBool = true;
-
     this.allotHigherZIndex();    
 
     e.stopPropagation();
@@ -33,8 +35,8 @@ class DialogBox extends Component {
   onMouseUp(e) {
     e.stopPropagation();
     e.preventDefault(); 
-    this.x = e.clientX;
-    this.y = e.clientY;
+    this.x = e.screenX;
+    this.y = e.screenY;
     this.tb.classList.remove('mousedown');
     this.box.removeEventListener('mousemove', this.onMouseMove);
     this.mouseDownBool = false;
@@ -45,10 +47,10 @@ class DialogBox extends Component {
     // doesn't conflict when they are close enough to share same
     // title bar space
     if (this.mouseDownBool) {
-      const dx = e.clientX - this.x;
-      const dy = e.clientY - this.y;    
-      this.x = e.clientX;
-      this.y = e.clientY;
+      const dx = e.screenX - this.x;
+      const dy = e.screenY - this.y;    
+      this.x = e.screenX;
+      this.y = e.screenY;
       let top = parseFloat(this.getStyleProp(this.box, 'top'));
       let left = parseFloat(this.getStyleProp(this.box, 'left'));
       top += dy;
@@ -90,7 +92,7 @@ class DialogBox extends Component {
       <div className={`dbWrapper`} ref={ node => this.box = node }
         onClick={this.allotHigherZIndex.bind(this)}
       >
-        <div className="dialog-box window">
+        <div className={`dialog-box window ${config.id}`}>
           <div className="title-bar dialog-title-bar"
             ref={ node => this.tb = node }
             onMouseDown={this.onMouseDown.bind(this)}
@@ -108,6 +110,8 @@ class DialogBox extends Component {
             </div>
             {config.title}
           </div>
+          <DropdownMenu config={config.dropdown.config} />
+          <DirectMenu config={config.directMenu.config} />
         </div>
       </div>
     );

@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import './Icon.css';
 
 class Icon extends Component {
+
   render() {
     return (
       <div className="icon" {...this.props} >
         <svg viewBox="0 0 18 18">
-
           <path id="calendar-tab" className="normal" d="m 1.5,2.5 0,14 15,0 0,-14 -2,0 0,2 -2,0 0,-3.5 0,3.5 -2,0 0,-2 -3,0 0,2 -2,0 0,-3.5 0,3.5 -2,0 0,-2 z m 0,3 15,0 0,11 -15,0 z m 4,2 6.5,0 -3,7 -2.5,0 2,-5 -3,0 z"/>
           <path id="calendar-tab-flat" className="normal" d="M 2,3 2,16 16,16 16,3 14,3 14,5 13,5 13,2 12,2 12,5 11,5 11,3 7,3 7,5 6,5 6,2 5,2 5,5 4,5 4,3 Z m 1,3 12,0 0,9 -12,0 z m 3,2 6,0 -3,6 -2.5,0 2,-4 -2.5,0 z"/>
           <path id="calendar-tab-inverted" className="inverted" d="m 1.5,3.5 0,13 15,0 0,-13 -3,0 0,1 -3,0 0,-1 -3,0 0,1 -3,0 0,-1 z m 3,3 9,0 0,7 -9,0 z m 0,-5 0,3 3,0 0,-3 z m 6,0 0,3 3,0 0,-3 z m -5,5 7,0 -3,7 -3,0 1.7,-4 -2.7,0 z"/>

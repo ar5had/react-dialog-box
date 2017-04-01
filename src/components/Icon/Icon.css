@@ -7,6 +7,12 @@
   display: none;
 }
 
+.icon path.show {
+  display: block;
+  fill: #555;
+  stroke: #444;
+}
+
 .icon path:target {
   display: block;
   stroke-width: 1;
