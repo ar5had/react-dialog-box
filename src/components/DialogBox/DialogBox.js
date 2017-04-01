@@ -8,6 +8,51 @@ class DialogBox extends Component {
   constructor(props) {
     super(props);
     this.state = this.getState(props.type);
+    // Binded here so that event listener can be removed
+    // in the onMouseDown method
+    this.onMouseMove = this.onMouseMove.bind(this);
+  }
+
+  onMouseDown(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    this.dx = 0;
+    this.dy = 0;
+    this.tb.classList.add('mousedown');
+    // start dragging when element is hold more than 400ms
+    // this removes stuttering
+    setTimeout(() => {
+      this.box.addEventListener('mousemove', this.onMouseMove);
+    }, 150);
+  }
+
+  onMouseUp(e) {
+    e.stopPropagation();
+    e.preventDefault(); 
+    this.x = e.clientX;
+    this.y = e.clientY;
+    this.tb.classList.remove('mousedown');
+    this.box.removeEventListener('mousemove', this.onMouseMove);
+  }
+
+  onMouseMove(e) {
+    const dx = e.clientX - this.x;
+    const dy = e.clientY - this.y;    
+    this.x = e.clientX;
+    this.y = e.clientY;
+    let top = parseFloat(this.getStyleProp(this.box, 'top'));
+    let left = parseFloat(this.getStyleProp(this.box, 'left'));
+    top += dy;
+    left += dx;
+    top = top < 15 ? 15 : top;
+    left = left < 15 ? 15 : left;    
+    this.box.style.top = `${top}px`;
+    this.box.style.left = `${left}px`;
+    console.log(dx, dy, top, left);
+  }
+
+  getStyleProp(node, prop) {
+    return window.getComputedStyle(node).getPropertyValue(prop);
   }
 
   getState(type) {
@@ -25,9 +70,13 @@ class DialogBox extends Component {
     const config = objectAssign({}, this.state.config);
 
     return (
-      <div className="dbWrapper" ref={ node => this.box = node }>
+      <div className={`dbWrapper`} ref={ node => this.box = node } >
         <div className="dialog-box window">
-          <div className="title-bar">
+          <div className="title-bar dialog-title-bar"
+            ref={ node => this.tb = node }
+            onMouseDown={this.onMouseDown.bind(this)}
+            onMouseUp={this.onMouseUp.bind(this)}
+          >
             <div className="icon-wrapper"
               onClick={() => {
                 this.box.classList.add('close');

@@ -75,7 +75,7 @@ button.dialog-btn {
 }
 
 button > * {
-  vertical-align: center;
+  vertical-align: middle;
 }
 
 button > span {

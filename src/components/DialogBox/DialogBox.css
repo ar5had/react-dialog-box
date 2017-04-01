@@ -25,6 +25,7 @@
 }
 
 .dialog-box {
+  margin: 10px;
   min-height: 340px;
 }
 
@@ -46,4 +47,8 @@
 
 .close-icon {
   margin: 5px;
+}
+
+.mousedown {
+  cursor: move;
 }
