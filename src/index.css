@@ -59,3 +59,48 @@ input:focus, select:focus {
 textarea {
   resize: none;
 }
+
+.dropdown-items-wrapper {
+  position: absolute;
+  top: 23px;
+  left: 0;
+  display: flex;
+  background: #f4f4f4;
+  flex-wrap: wrap;
+  width: 200px;
+  box-shadow: 0px 10px 20px 0 rgba(46,61,73,.35);
+  visibility: hidden;
+  transform: scale(.9);
+  transition: visibility 50ms linear, transform 50ms linear, opacity 50ms linear;
+  z-index: 99999;
+}
+
+.dropdown-items-wrapper:empty {
+  display: none;
+}
+
+.dropdown-item {
+  padding: 8px 20px  8px 30px;
+  flex: 1 0 150px;
+  transition: background .1s linear;
+}
+
+.dropdown-item:hover {
+  cursor: default;
+  background: #ddd;
+}
+
+.divider {
+  margin: 5px 8px;
+  border-bottom: solid 1px #c9c9c9;
+  padding: 0;
+}
+
+.dropdown-item.disabled {
+ background: transparent;
+ opacity: .5;
+}
+
+.dropdown-item.disabled:hover {
+ background: transparent;
+}

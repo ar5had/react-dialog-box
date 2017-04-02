@@ -11,10 +11,18 @@ export const config = {
   dropdown: {
     type: DROPDOWN,
     config: [
-      {label: 'Event', accessCharPos: 4},
-      {label: 'Edit', accessCharPos: 0},
-      {label: 'View', accessCharPos: 0},
-      {label: 'Options', accessCharPos: 0}           
+      {label: 'Event', accessCharPos: 4,
+        dropdown: ["New", DIVIDER, "Save", "Save and Close",
+         "Delete", "Page Setup", "!Print", DIVIDER, "Close"]},
+      {label: 'Edit', accessCharPos: 0,
+        dropdown: ["!Undo", "!Redo", DIVIDER, "Cut",
+         "Copy", "Paste", DIVIDER, "Select All"]},
+      {label: 'View', accessCharPos: 0,
+        dropdown: ["Toolbars", DIVIDER, "Show Related Links"]},
+      {label: 'Options', accessCharPos: 0,
+        dropdown: ["Invite Attendees", "Attach", "Show Timezones",
+          DIVIDER, "Priority", "Privacy", "Status", "Show Time as"]
+      }           
     ]
   },
   directMenu: {

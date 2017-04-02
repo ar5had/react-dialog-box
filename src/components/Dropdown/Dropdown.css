@@ -1,5 +1,6 @@
 .dropdown {
-  margin: 7px 10px;
+  padding: 7px 10px;
+  position: relative;
 }
 
 .dropdown .label {
@@ -8,4 +9,15 @@
 
 .label .access-key {
   text-decoration: underline;
+}
+
+.dropdown > .dropdown-items-wrapper {
+  top: 31px;
+  left: 0;
+}
+
+.dropdown:focus > .dropdown-items-wrapper {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }

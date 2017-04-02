@@ -5,7 +5,7 @@ import './DropdownMenu.css';
 
 class DropdownMenu extends Component {
   getDropdowns() {
-    return this.props.config.map((elem, i) => <Dropdown config={elem} key={i}/>);
+    return this.props.config.map((elem, i) => <Dropdown config={elem} key={i} tabIndex={i}/>);
   }
 
   render() {
