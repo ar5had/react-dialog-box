@@ -24,14 +24,11 @@ class Section extends Component {
       case INPUT:
         return <Input key={key} {...elem} />
       case INPUT_DT:
-        
-        break;
+        return <InputDT key={key} {...elem} />
       case SELECT_BOX:
-        
-        break;
+        return <SelectBox key={key} {...elem} />
       case TABS_TEXTAREA:
-        
-        break;
+        return <TabTextarea key={key} {...elem} />        
       default:
         console.error('SECTION ITEM not found!');
         break;

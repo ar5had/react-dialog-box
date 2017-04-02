@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 
 import './Dropdown.css';
 
+import { getLabelWithAccessCode as getLabel } from '../../utils/getLabelWithAccessCode';
+
 class Dropdown extends Component {
-  getLabelValue(label, pos) {
+  getLabel(label, pos) {
     const accessChar = <span className="access-key">{label[pos]}</span>;
     return (
       <span className="label">
@@ -15,7 +17,7 @@ class Dropdown extends Component {
     const config = this.props.config;
     return (
       <div className="dropdown">
-        { this.getLabelValue(config.label, config.accessCharPos) }
+        { getLabel(config.label, config.accessCharPos) }
       </div>
     );
   }

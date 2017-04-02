@@ -1,0 +1,19 @@
+.input-elem {
+  display: flex;
+  padding: 5px;
+}
+
+.FULL.label-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;  
+}
+
+.FULL.input-wrapper {
+  flex: 7;
+  display: flex;
+}
+
+.FULL.input-wrapper input{
+  flex: 1;
+}

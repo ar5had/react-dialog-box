@@ -2,7 +2,7 @@
 
 * {
   font-family: 'Roboto', sans-serif;
-  color: #666;
+  color: #555;
   font-size: 13px;
   outline: none;
   font-weight: 400;
@@ -20,7 +20,7 @@ body {
 
 .window {
   border-radius: 5px;  
-  background: #f9f9f9;
+  background: #f7f7f7;
   border: solid 1px #a9a9a9;  
   box-shadow: 0px 10px 30px 0 rgba(46,61,73,.35);
 }
@@ -35,4 +35,19 @@ body {
   color: #888;
   border-bottom: solid 1px #a9a9a9;
   margin-bottom: 30px;
+}
+
+input {
+  background: transparent;
+  border-radius: 3px;
+  border: solid 1px #a9a9a9;
+  padding: 5px 8px;
+  transition: box-shadow .100ms linear;
+  box-shadow: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#f6f6f6)); 
+  background: -moz-linear-gradient(top, #eee, #f6f6f6);
+}
+
+input:focus {
+  box-shadow: 0 0 0px 1px rgba(0, 176, 255, 0.56) inset;
 }

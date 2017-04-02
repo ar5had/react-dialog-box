@@ -1,0 +1,20 @@
+.input-elem {
+  display: flex;
+  padding: 5px;
+}
+
+.AUTO.label-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;  
+}
+
+.AUTO.input-wrapper {
+  flex: 7;
+  display: flex;
+}
+
+.input-wrapper .date-input {
+  width: auto !important;
+  margin-right: 10px;
+}

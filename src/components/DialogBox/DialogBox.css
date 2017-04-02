@@ -14,6 +14,11 @@
   margin-bottom: 0;
 }
 
+.dialog-title-bar > span {
+  font-weight: 700;
+  color: #888;
+}
+
 .dbWrapper.close {
   animation: close .3s ease forwards;  
 }
@@ -31,6 +36,7 @@
 .dialog-box {
   margin: 10px;
   min-height: 340px;
+  background: #f6f6f6 !important;
 }
 
 .task-dialog .direct-button:nth-child(1) .icon > svg > #save-close,
