@@ -5,8 +5,7 @@
   transform: translate(-50%, -50%);
   max-height: 100vh;
   z-index: 9999;
-  min-width: 700px;
-  width: 70vw;
+  width: 700px;
   animation: open .2s ease forwards;
 }
 
