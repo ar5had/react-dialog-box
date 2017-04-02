@@ -1,8 +1,15 @@
 .section {
   border-bottom: solid 2px #a9a9a9;
   padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .section:last-child {
   border: none;
+}
+
+.section > *{
+  flex: 1 1 100%;
 }

@@ -5,7 +5,7 @@ import './DirectMenu.css';
 
 class DirectMenu extends Component {
   getDirectButtons() {
-    return this.props.config.map((elem, i) => <DirectButton config={elem} key={i} />);
+    return this.props.config.map((elem, i) => <DirectButton config={elem} key={i} tabIndex={i} />);
   }
 
   render() {

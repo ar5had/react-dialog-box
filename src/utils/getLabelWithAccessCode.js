@@ -4,7 +4,9 @@ export const getLabelWithAccessCode = (label, pos) => {
   const accessChar = <span className="access-key">{label[pos]}</span>;
   return (
     <span className="label">
-      {label.slice(0, pos)}{accessChar}{label.slice(pos + 1)}
+      <span>{ label.slice(0, pos) }</span>
+      { accessChar }
+      <span>{label.slice(pos + 1) }</span>
     </span>
   );
 }

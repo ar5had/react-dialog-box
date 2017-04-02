@@ -13,11 +13,24 @@ class Dropdown extends Component {
       </span>
     );
   }
+
+  getDropdowns(dropdowns) {
+    if(dropdowns) {
+      return dropdowns.map(
+        (elem, i) => 
+          <div className="dropdown-item" key={i}>{ elem }</div>
+      );
+    }
+  }
+
   render() {
     const config = this.props.config;
     return (
       <div className="dropdown">
         { getLabel(config.label, config.accessCharPos) }
+        <div className="dropdown-items-wrapper">
+          { this.getDropdowns(config.dropdown) }
+        </div>
       </div>
     );
   }

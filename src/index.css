@@ -39,15 +39,23 @@ body {
 
 input {
   background: transparent;
-  border-radius: 3px;
   border: solid 1px #a9a9a9;
-  padding: 5px 8px;
   transition: box-shadow .100ms linear;
   box-shadow: none;
+  padding: 5px 8px;
+  border-radius: 3px;
   background: -webkit-gradient(linear, left top, left bottom, from(#eee), to(#f6f6f6)); 
   background: -moz-linear-gradient(top, #eee, #f6f6f6);
 }
 
-input:focus {
+select {
+  padding: 3px 8px 3px 5px;
+}
+
+input:focus, select:focus {
   box-shadow: 0 0 0px 1px rgba(0, 176, 255, 0.56) inset;
+}
+
+textarea {
+  resize: none;
 }

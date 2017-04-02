@@ -1,0 +1,25 @@
+.select-box-elem {
+  display: flex;
+  padding: 5px 0;
+}
+
+.HALF.select-box-elem {
+  flex: 0 1 50%;  
+}
+
+.slabel-wrapper {
+  flex: 0 0 70px;
+  display: flex;
+  align-items: center;  
+  padding-left: 5px;
+}
+
+.select-box-wrapper {
+  flex: 1;
+  display: flex;
+  padding-right: 5px;
+}
+
+.HALF .select-box-wrapper select{
+  width: 100%;
+}

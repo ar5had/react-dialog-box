@@ -22,8 +22,8 @@ export const config = {
     config: [
       {label: 'Save and Close', icon: 'save-close', dropdown: null},
       {label: 'Invite Attendees', icon: 'address', dropdown: null},
-      {label: 'Privacy', icon: 'security', dropdown: []},
-      {label: 'Attach', icon: 'attach', dropdown: []},
+      {label: 'Privacy', icon: 'security', dropdown: ["Public Event", "Show Time and Date Only", "Private Event"]},
+      {label: 'Attach', icon: 'attach', dropdown: ["Webpage"]},
       {label: 'Delete', icon: 'delete', dropdown: null}  
     ]
   },
@@ -46,7 +46,7 @@ export const config = {
           },
           {
             label: 'Calendar', accessCharPos: 0, type: SELECT_BOX,
-            dataType: 'text', width: HALF, options: ['HOME']
+            dataType: 'text', width: HALF, options: ['Home']
           },
         ]
       },
@@ -84,16 +84,19 @@ export const config = {
       {
         items: [
           {
-            label: 'Description', accessCharPos: 6, type: TABS_TEXTAREA, width: FULL,
-            dataType: 'text'
-          },
-          {
-            label: 'Attachments', accessCharPos: 5, type: TABS_TEXTAREA, width: FULL,
-            dataType: 'text'
-          },
-          {
-            label: 'Attendees', accessCharPos: 4, type: TABS_TEXTAREA, width: FULL,
-            dataType: 'text'
+            type: TABS_TEXTAREA,
+            width: FULL,
+            config: [
+              {
+                label: 'Description', accessCharPos: 6, dataType: 'text'
+              },
+              {
+                label: 'Attachments', accessCharPos: 5, dataType: 'text'
+              },
+              {
+                label: 'Attendees', accessCharPos: 4, dataType: 'text'
+              }
+            ]
           }
         ]
       }

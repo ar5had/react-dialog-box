@@ -1,0 +1,52 @@
+.FULL.tab-textarea-elem {
+  display: flex;
+  padding: 5px 0;
+  flex-direction: column;
+}
+
+.tab-textarea-all-labels-wrapper {
+  display: flex;
+}
+
+.ta-label-wrapper {
+  flex: 0 0 70px;
+  display: flex;
+  align-items: center;
+  margin: 3px 3px 0 5px;
+  padding: 5px 5px 8px 5px;
+  border: solid 1px transparent;
+  transition: all 50ms linear;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0
+}
+
+.ta-label-wrapper:hover {
+  cursor: default;
+  border-color: #a9a9a9;
+  background: #eee;
+}
+
+.ta-label-wrapper.active, .ta-label-wrapper.active.hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#ccc)); 
+  background: -moz-linear-gradient(top, #f6f6f6, #ccc);
+  border-color: #a9a9a9;
+}
+
+.textarea-wrapper {
+  flex: 1;
+  display: flex;
+  margin: 0 5px 5px 5px;
+  background: #ddd;
+  border-radius: 0 0 5px 5px;
+  border: solid 1px #a9a9a9;
+  padding: 10px;
+}
+
+.textarea-wrapper textarea {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dedede), to(#f6f6f6));
+  background: -moz-linear-gradient(top, #dedede, #f6f6f6);
+  width: 100%;
+  height: 70px;
+  border: solid 1px #a9a9a9;
+  padding: 5px 8px;
+}
