@@ -41,6 +41,7 @@
 .app-description {
   margin-bottom: 20px;
   max-width: 500px;
+  line-height: 2;
 }
 
 circle {

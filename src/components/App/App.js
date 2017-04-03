@@ -76,7 +76,7 @@ class App extends Component {
               Click any of the below buttons to get Thunderbird 
               like dialog-box. The UI of the dialog box is inspired 
               from dialog box in Elementary OS version of Thunderbird. 
-              Check this <a href="https://drive.google.com/open?id=0B4eS4nKUNceueWhlb1lUSE55MnM" target="_blank">page</a> to 
+              Check this short <a href="https://www.youtube.com/watch?v=FFoPk4WCGgI&t=38s" target="_blank">video</a> to 
               see how dialog box looks on Elementary OS.
             </p>
           </div>
