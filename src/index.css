@@ -16,6 +16,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   justify-content: center;
+  position: relative;
+  overflow-y: scroll;
 }
 
 .window {
