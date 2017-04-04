@@ -27,7 +27,7 @@ class DialogBox extends Component {
     this.dx = 0;
     this.dy = 0;
     this.tb.classList.add('mousedown');
-    // start dragging when element is hold more than 400ms
+    // start dragging when element is held more than 100ms
     // this removes stuttering
     setTimeout(() => {
       this.box.addEventListener('mousemove', this.onMouseMove);
